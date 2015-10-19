@@ -1,11 +1,10 @@
--- CONNECT TO url_shortener_bradley_bouley;
 
--- INSERT INTO urls VALUES
--- ('www.google.com', 1),
--- ('www.github.com', 2),
--- ('www.linkedin.com', 3),
--- ('www.facebook.com', 5),
--- ('www.twitter.com', 8);
+INSERT INTO urls (original_url, count) VALUES
+('www.google.com', 1),
+('www.github.com', 2),
+('www.linkedin.com', 3),
+('www.facebook.com', 5),
+('www.twitter.com', 8);
 
 SELECT * FROM urls;
 
@@ -23,4 +22,8 @@ DELETE FROM urls WHERE id = 5;
 
 SELECT * FROM urls;
 
--- DROP TABLE urls;
+DROP TABLE urls;
+
+\connect postgres
+
+DROP DATABASE url_shortener_bradley_bouley;

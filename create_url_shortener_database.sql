@@ -1,4 +1,6 @@
--- CREATE DATABASE url_shortener_bradley_bouley;
+CREATE DATABASE url_shortener_bradley_bouley;
+
+\connect url_shortener_bradley_bouley;
 
 CREATE TABLE urls (
   id SERIAL PRIMARY KEY,
@@ -6,12 +8,16 @@ CREATE TABLE urls (
   count INTEGER DEFAULT 0
 );
 
-INSERT INTO urls (original_url, count) VALUES
-('www.google.com', 1),
-('www.github.com', 2),
-('www.linkedin.com', 3),
-('www.facebook.com', 5),
-('www.twitter.com', 8);
+-- INSERT INTO urls (original_url, count) VALUES
+-- ('www.google.com', 1),
+-- ('www.github.com', 2),
+-- ('www.linkedin.com', 3),
+-- ('www.facebook.com', 5),
+-- ('www.twitter.com', 8);
+
+-- SELECT * FROM urls;
+
+-- DROP TABLE urls;
 
 -- SELECT * FROM urls;
 
